@@ -1,2 +1,10 @@
-node_modules
+
+coverage/
+# Environment files
 .env
+.env.*
+!.env.example
+
+# Dependencies and build output
+node_modules/
+dist/
