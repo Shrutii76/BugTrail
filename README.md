@@ -90,5 +90,4 @@ Express.js Backend
 MongoDB Database
 ```
 
-ublishing the project. Choose a license that matches how you want others to use, modify, and distribute BugTrail.
 
