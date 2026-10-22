@@ -7,7 +7,15 @@ import { AuthProvider } from "./contexts/AuthContext";
 import App from "./App";
 import "./index.css";
 
-const queryClient = new QueryClient();
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      retry: 1,
+      refetchOnWindowFocus: false,
+      staleTime: 30_000,
+    },
+  },
+});
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>

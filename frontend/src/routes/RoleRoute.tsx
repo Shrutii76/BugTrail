@@ -28,5 +28,9 @@ export default function RoleRoute({ allowedRoles, children }: RoleRouteProps) {
    return <Navigate to="/dashboard" replace />;
  }
 
+ if (!user || !allowedRoles.includes(user.role)) {
+   return <Navigate to="/unauthorized" replace />;
+ }
+
   return children ? <>{children}</> : null;
 }
