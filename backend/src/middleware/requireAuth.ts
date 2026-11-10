@@ -1,5 +1,5 @@
 import type { Request, Response, NextFunction } from "express";
-import { COOKIE_NAME, verifyAuthToken } from "../utils/auth.js";
+import { COOKIE_NAME, verifyAuthToken } from "../utils/auth";
 
 export function requireAuth(
   req: Request,

@@ -1,5 +1,5 @@
 import type { RequestHandler } from "express";
-import type { UserRole } from "../types/user.types.js";
+import type { UserRole } from "../types/user.types";
 
 export function requireRole(...allowedRoles: UserRole[]): RequestHandler {
   return (_req, res, next) => {

@@ -4,8 +4,8 @@ import {
   login,
   logout,
   getCurrentUser,
-} from "../controllers/authController.js";
-import { requireAuth } from "../middleware/requireAuth.js";
+} from "../controllers/authController";
+import { requireAuth } from "../middleware/requireAuth";
 
 const router = Router();
 

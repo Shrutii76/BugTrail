@@ -1,19 +1,19 @@
 import type { Request, Response } from "express";
 import mongoose from "mongoose";
-import User from "../models/User.js";
+import User from "../models/User";
 import {
   clearAuthCookie,
   setAuthCookie,
   signAuthToken,
-} from "../utils/auth.js";
+} from "../utils/auth";
 import {
   validateRegisterInput,
   validateLoginInput,
-} from "../validators/authValidator.js";
+} from "../validators/authValidator";
 import {
   hashPassword,
   verifyPassword,
-} from "../services/passwordService.js";
+} from "../services/passwordService";
 
 function publicUser(user: InstanceType<typeof User>) {
   return {
@@ -247,4 +247,3 @@ export async function getCurrentUser(
     });
   }
 }
-
